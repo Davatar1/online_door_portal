@@ -12,7 +12,7 @@ class CreateEntryLogsTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {   Schema::dropIfExists('entry_logs');
         Schema::create('entry_logs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
