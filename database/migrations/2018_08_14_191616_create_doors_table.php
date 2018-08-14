@@ -12,7 +12,7 @@ class CreateDoorsTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {   Schema::dropIfExists('doors');
         Schema::create('doors', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
