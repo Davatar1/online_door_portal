@@ -82,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Automated Door Portal
+                    *Automated Door Portal*
                 </div>
 
                 {{--  <div class="links">
