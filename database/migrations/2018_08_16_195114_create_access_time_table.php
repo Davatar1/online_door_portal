@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRolesTable extends Migration
+class CreateAccessTimeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,16 +12,10 @@ class CreateRolesTable extends Migration
      * @return void
      */
     public function up()
-    {   Schema::dropIfExists('roles');
-        Schema::create('roles', function (Blueprint $table) {
+    {
+        Schema::create('access_time', function (Blueprint $table) {
             $table->increments('id');
-<<<<<<< HEAD
             $table->string('name');
-=======
-            $table->integer('role_id')->unsigned();
-            $table->string('name');
-            $table->string('role');
->>>>>>> 2d2b354c545975ba92c93eb4abdc4c901b0e4fd6
             $table->string('description');
             $table->timestamps();
         });
@@ -34,6 +28,6 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('access_time');
     }
 }
