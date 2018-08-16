@@ -12,10 +12,11 @@
 
     <!-- Styles -->
     <link href="https://bootswatch.com/4/litera/bootstrap.css" rel="stylesheet">
+    <!-- Styles -->
 </head>
 <body>
     <div id="app">
-        @include('includes.navbara')
+        @include('includes.adminnavbar')
         <div class="container">
             
             @yield('content')

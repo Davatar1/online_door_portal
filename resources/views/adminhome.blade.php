@@ -1,8 +1,11 @@
+{{-- Admin Page --}}
+
+
 @extends('layouts.admin')
     @section('content')
     <div class= "content">
         <div class="title m-b-md">
-            <h1>It is a start!</h1>
+            <h1>Start!</h1>
         </div>
     </div>
     @endsection
