@@ -18,8 +18,8 @@ class CreateEntryLogsTable extends Migration
             $table->string('name');
             $table->string('role');
             $table->string('description');
-            $table->integer('card_key')->unsigned()->unique();
-            $table->integer('uwi_id')->unsigned()->unique();
+            $table->string('card_key')->unique();
+            $table->string('uwi_id')->unique()->nullable();
             $table->date('date');
             $table->time('time');
             $table->timestamps();
