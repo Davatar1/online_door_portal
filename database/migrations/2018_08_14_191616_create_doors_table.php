@@ -21,7 +21,7 @@ class CreateDoorsTable extends Migration
             $table->string('event outcome');
             $table->string('card_key')->unique();
             $table->string('uwi_id')->unique()->nullable();
-            $table->string('name');
+            $table->string('user_id');
             $table->timestamps();
         });
     }

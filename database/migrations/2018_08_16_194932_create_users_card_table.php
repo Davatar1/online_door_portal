@@ -16,7 +16,7 @@ class CreateUsersCardTable extends Migration
         Schema::create('users_card', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->integer('card_key')->unsigned()->unique();
+            $table->integer('card_id')->unsigned()->unique();
             $table->timestamps();
         });
     }
