@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEntryLogsTable extends Migration
+class CreateCardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,16 +12,12 @@ class CreateEntryLogsTable extends Migration
      * @return void
      */
     public function up()
-    {   Schema::dropIfExists('entry_logs');
-        Schema::create('entry_logs', function (Blueprint $table) {
+    {
+        Schema::create('cards', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('role');
+            $table->string('rfid');
             $table->string('description');
-            $table->integer('card_key')->unsigned()->unique();
-            $table->integer('uwi_id')->unsigned()->unique();
-            $table->date('date');
-            $table->time('time');
+            $table->integer("facilty_code_id");
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ class CreateEntryLogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('entry_logs');
+        Schema::dropIfExists('cards');
     }
 }
