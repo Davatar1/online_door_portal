@@ -15,10 +15,10 @@ class CreateRolesTable extends Migration
     {   Schema::dropIfExists('roles');
         Schema::create('roles', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('role_id')->unsigned();
+            $table->integer('role_id')->unsigned()->nullable();
             $table->string('name');
-            $table->string('role');
-            $table->string('description');
+            $table->string('role')->nullable();
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }
