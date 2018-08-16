@@ -12,11 +12,10 @@ class CreateRolesTable extends Migration
      * @return void
      */
     public function up()
-    {   Schema::dropIfExists('roles');
+    {   //Schema::dropIfExists('roles');
         Schema::create('roles', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('role_id')->unsigned();
-            $table->string('name');
             $table->string('role');
             $table->string('description');
             $table->timestamps();
