@@ -19,8 +19,7 @@ class CreateDoorsTable extends Migration
             $table->time('time');
             $table->string('event');
             $table->string('event_outcome')->nullable();
-            $table->integer('entity_id')->nullable();
-            $table->string('user_id');
+            $table->string('user_id')->nullable();
             $table->timestamps();
         });
     }
