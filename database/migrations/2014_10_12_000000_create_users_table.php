@@ -18,13 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-<<<<<<< HEAD
-            $table->string('card_key')->unsigned()->unique();
-            $table->integer('uwi_id')->unsigned()->unique()->nullable();
-=======
           /*$table->string('card_key')->unique();
             $table->string('uwi_id')->unique()->nullable(); */
->>>>>>> 2d2b354c545975ba92c93eb4abdc4c901b0e4fd6
             $table->rememberToken();
             $table->timestamps();
         });
