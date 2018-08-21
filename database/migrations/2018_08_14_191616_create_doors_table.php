@@ -12,14 +12,18 @@ class CreateDoorsTable extends Migration
      * @return void
      */
     public function up()
-    {   Schema::dropIfExists('doors');
+    {  // Schema::dropIfExists('doors');
         Schema::create('doors', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
             $table->time('time');
             $table->string('event');
             $table->string('event_outcome')->nullable();
+<<<<<<< HEAD
             $table->integer('entity_id')->nullable();
+=======
+            $table->string('user_id')->nullable();
+>>>>>>> ecb2877bfdb8758d15acb0b6ac662d52bc38147c
             $table->timestamps();
         });
     }
