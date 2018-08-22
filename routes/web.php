@@ -21,3 +21,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', function(){
     return view('adminhome') ;   
 });
+Route::get('/usermanagement', 'AdminController@manage')->name('manage users');
