@@ -1,5 +1,6 @@
 
 
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
     <style>
@@ -208,8 +209,7 @@
    
     
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-   
-   
+ 
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor05" aria-controls="navbarColor05" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
      </button>
@@ -219,10 +219,28 @@
          <li class="nav-item active">
            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
          </li>
+<<<<<<< HEAD
          <li class="nav-item">
            <a class="nav-link" href="/usermanagement">User Management</a>
          </li>
+=======
+>>>>>>> master
         
+         
+        
+
+         @if (auth()->check())
+                @if (auth()->user()->isAdmin())
+                    <li class="nav-item">
+                    <a class="nav-link" href="/UserManagement">User Management</a>
+                    </li>
+                 @else(auth()->user()->isUser())
+                    <li class="nav-item">
+                    <a class="nav-link" href="/AskShit">Ask Shit</a>
+                    </li>
+                  @endif
+         @endif
+         
        </ul>
          <ul class="nav navbar-nav navbar-right">
            
@@ -248,7 +266,23 @@
      <!-- Notification -->
    
    
-   
+     <li class="nav-item dropdown">
+      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+          {{ Auth::user()->name }} <span class="caret"></span>
+      </a>
+
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{{ route('logout') }}"
+             onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+              {{ __('Logout') }}
+          </a>
+
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form>
+      </div>
+  </li>
          </ul>
    
        <form class="form-inline my-2 my-lg-0">
