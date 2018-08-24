@@ -230,7 +230,7 @@
                     </li>
                  @else(auth()->user()->isUser())
                     <li class="nav-item">
-                    <a class="nav-link" href="/Ask Shit">Ask Shit</a>
+                    <a class="nav-link" href="/AskShit">Ask Shit</a>
                     </li>
                   @endif
          @endif
