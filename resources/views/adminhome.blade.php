@@ -11,8 +11,9 @@
  <table>
     @foreach($Doors as $Door)
     <tr><td>{{$Door->name}} - {{$Door->created_at}}</td></tr>
-</table>
+
     @endforeach
+</table>
         </div>
 
 
