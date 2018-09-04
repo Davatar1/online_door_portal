@@ -2,19 +2,13 @@
 
 
 @extends('layouts.admin')
+<title>Dashboard</title>
     @section('content')
     <div class= "content">
         <div class="title m-b-md">
             <h1>Start!</h1>
         </div>
-        <div class="table">
- <table>
-    @foreach($Doors as $Door)
-    <tr><td>{{$Door->name}} - {{$Door->created_at}}</td></tr>
-
-    @endforeach
-</table>
-        </div>
+        
 
 
 
